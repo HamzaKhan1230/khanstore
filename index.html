@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- Owl Carasole -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+  <style>
+
+
+    /* <!-- ---Fullscreen Navigation----- --> */
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.aa{
+
+}
+.wrapper{
+  display: flex;
+   align-items: center;
+  justify-content: center;
+  /* min-height: 145vh; */
+  /* background: #343F4F; */
+  background-image: url("assets/images/car-slider.jpg");
+  background-size: 1500px 300px;
+  background-repeat: no-repeat;
+  padding: 10px;
+  
+}
+.wrapper .static-txt{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #FC6D6D;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #343F4F;
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+  </style>
+</head>
+  <body>
+                  <!-- ---Navbar----- -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark aa">
+            <a class="navbar-brand" href="#">Khan Store</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Car</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bike</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Frame</a>
+                    </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+
+
+            <!-- -----Text animation---- -->
+
+
+  <div class="wrapper">
+    <div class="static-txt">I'm a</div>
+    <ul class="dynamic-txts">
+      <li><span>Take Secreenshot</span></li>
+      <li><span>Sent In Contact Number</span></li>
+    </ul>
+
+        </div>
+
+
+
+
+
+
+         <!-- ---------- Owl-Carasole---- -->
+         <div class="container-fluid">
+                <div class="owl-carousel owl-theme mt-5">
+    <div class="item"><img src="assets/images/car/carJPG.JPG" alt="Spider-Man"></div>
+    <div class="item"><img src="assets/images/car/car_2JPG.JPG" alt="Spider-Man"></div>
+
+    <div class="item"><img src="assets/images/car-slider.jpg" alt="Spider-Man"></div>
+
+    <div class="item"><img src="assets/images/car-slider.jpg" alt="Spider-Man"></div>
+
+    <div class="item"><img src="assets/images/car-slider.jpg" alt="Spider-Man"></div>
+    <div class="item"><img src="assets/images/car-slider.jpg" alt="Spider-Man"></div>
+    <div class="item"><img src="assets/images/car-slider.jpg" alt="Spider-Man"></div>
+    <div class="item"><img src="assets/images/car-slider.jpg" alt="Spider-Man"></div>
+    <div class="item"><img src="assets/images/car-slider.jpg" alt="Spider-Man"></div>
+    <div class="item"><img src="assets/images/car-slider.jpg" alt="Spider-Man"></div>
+    <div class="item"><img src="assets/images/car-slider.jpg" alt="Spider-Man"></div>
+    <div class="item"><img src="assets/images/car-slider.jpg" alt="Spider-Man"></div>    
+</div>
+
+<div class="container">
+  <h2 class="bg-dark text-center text-light mt-3">Cars Plates</h2>
+  <div class="row">
+ 
+
+
+
+
+
+    <div class="card ml-3 mt-3" style="width: 20rem;">
+      <div class="card-body bg-dark text-white">
+        <img class="card-img-top" src="assets/images/car/car_2JPG.JPG" alt="Card image cap">
+        <h5 class="card-title mt-4">Card title</h5>
+        <p class="card-text">RS. 5220</p>
+
+
+        <!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <img src="assets/images/car/car_2JPG.JPG" alt="Spider-Man">
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()">
+
+
+
+
+        <a class="btn btn-primary">See Full Image</a></span>
+      </div>
+    </div>
+
+     <div class="card ml-3 mt-3" style="width: 20rem;">
+      <div class="card-body bg-dark text-white">
+        <img class="card-img-top" src="assets/images/car/car_2JPG.JPG" alt="Card image cap">
+        <h5 class="card-title mt-4">Card title</h5>
+        <p class="card-text">RS. 5220</p>
+        <a href="#" class="btn btn-primary">See Full Image</a>
+      </div>
+    </div>
+    
+    <div class="card ml-3 mt-3" style="width: 20rem;">
+      <div class="card-body bg-dark text-white">
+        <img class="card-img-top" src="assets/images/car/car_2JPG.JPG" alt="Card image cap">
+        <h5 class="card-title mt-4">Card title</h5>
+        <p class="card-text">RS. 5220</p>
+        <a href="#" class="btn btn-primary">See Full Image</a>
+      </div>
+    </div>
+
+    <div class="card ml-3 mt-3" style="width: 20rem;">
+      <div class="card-body bg-dark text-white">
+        <img class="card-img-top" src="assets/images/car/car_2JPG.JPG" alt="Card image cap">
+        <h5 class="card-title mt-4">Card title</h5>
+        <p class="card-text">RS. 5220</p>
+        <a href="#" class="btn btn-primary">See Full Image</a>
+      </div>
+    </div>
+
+    <div class="card ml-3 mt-3" style="width: 20rem;">
+      <div class="card-body bg-dark text-white">
+        <img class="card-img-top" src="assets/images/car/car_2JPG.JPG" alt="Card image cap">
+        <h5 class="card-title mt-4">Card title</h5>
+        <p class="card-text">RS. 5220</p>
+        <a href="#" class="btn btn-primary">See Full Image</a>
+      </div>
+    </div>
+
+    <div class="card ml-3 mt-3" style="width: 20rem;">
+      <div class="card-body bg-dark text-white">
+        <img class="card-img-top" src="assets/images/car/car_2JPG.JPG" alt="Card image cap">
+        <h5 class="card-title mt-4">Card title</h5>
+        <p class="card-text">RS. 5220</p>
+        <a href="#" class="btn btn-primary">See Full Image</a>
+      </div>
+    </div>
+
+    <div class="card ml-3 mt-3" style="width: 20rem;">
+      <div class="card-body bg-dark text-white">
+        <img class="card-img-top" src="assets/images/car/car_2JPG.JPG" alt="Card image cap">
+        <h5 class="card-title mt-4">Card title</h5>
+        <p class="card-text">RS. 5220</p>
+        <a href="#" class="btn btn-primary">See Full Image</a>
+      </div>
+    </div>
+
+
+
+
+</div>
+</div>
+
+<!-- fullscreen -->
+
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <img src="assets/images/car/car_3.JPG" alt="Spider-Man">
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()"><i class="fas fa-compress"></i></span>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Owl Carasole -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
+ <script>
+//full//
+/* Open */
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+
+
+
+</script>
